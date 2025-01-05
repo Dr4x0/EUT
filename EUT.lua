@@ -95,7 +95,7 @@ local Toggle = Main:CreateToggle({
 })
 
 
---[[
+
 local List = ""
 for _, item in ipairs(game:GetService("ReplicatedStorage").locked_upgs:GetChildren()) do
     List = List .. " + " .. item.Name
@@ -105,4 +105,3 @@ local Paragraph = Main:CreateParagraph({
     Title = "Paragraph Example",
     Content = List
 })
-]]
