@@ -22,8 +22,8 @@ local GetFunky = false
 local function AAlphaFunction()
     while AAlpha == true do
         game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("2b_3", true)
-		game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("5b_3", true)
-		game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("8b", true)
+        game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("5b_3", true)
+        game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("8b", true)
         wait(0.5)
     end
 end    
@@ -45,17 +45,17 @@ local function GetFunkyFunction()
             game:GetService("ReplicatedStorage").remotes.upgrade:FireServer(i, true)
         end
         game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("RightSide")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("LeftSide")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("Materialize")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("Materialize2")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("RightSide")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("LeftSide")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("Materialize")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("Materialize2")
         game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("Materialize3")
         game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("Materialize1b")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain2")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain3")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain4")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain2")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain3")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain4")
         game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain5")
-		game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain1b")
+        game:GetService("ReplicatedStorage").remotes.research_upgrade:FireServer("PointGain1b")
         wait(0.5)
     end
 end
