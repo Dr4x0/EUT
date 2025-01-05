@@ -1,6 +1,7 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
     Name = "Everything Upgrade Tree",
+    Icon = 95322022164482,
     LoadingTitle = "EUT Menu",
     LoadingSubtitle = "By Dr4x0z",
     Theme = "DarkBlue"
@@ -12,14 +13,14 @@ UserInputService.MouseIconEnabled = true
 
 
 --||--Variables--||--
-_G.AAlpha = false
-_G.ABlackHole = false
+local AAlpha = false
+local ABlackHole = false
 
-_G.GetFunky = false
+local GetFunky = false
 
 --||--Functions--||--
 local function AAlphaFunction()
-    while _G.AAlpha == true do
+    while AAlpha == true do
         game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("2b_3", true)
 		game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("5b_3", true)
 		game:GetService("ReplicatedStorage").remotes.upgrade:FireServer("8b", true)
@@ -28,7 +29,7 @@ local function AAlphaFunction()
 end    
 
 local function ABlackHoleFunction()
-    while _G.AAlpha == true do
+    while AAlpha == true do
         for i = 1, 12 do 
             game:GetService("ReplicatedStorage").remotes.upgrade:FireServer(i .. "bh", true)
         end
@@ -39,7 +40,7 @@ end
 
 
 local function GetFunkyFunction()
-    while _G.GetFunky == true do
+    while GetFunky == true do
         for i = 1, 34 do
             game:GetService("ReplicatedStorage").remotes.upgrade:FireServer(i, true)
         end
@@ -67,7 +68,7 @@ local Toggle = Main:CreateToggle({
     Name = "Automate Alpha",
     CurrentValue = false,
     Callback = function(Value)
-        _G.AAlpha = Value
+        AAlpha = Value
         AAlphaFunction()
     end,
 })
@@ -77,7 +78,7 @@ local Toggle = Main:CreateToggle({
     Name = "Automate Black Hole",
     CurrentValue = false,
     Callback = function(Value)
-        _G.ABlackHole = Value
+        ABlackHole = Value
         ABlackHoleFunction()
     end,
 })
@@ -88,11 +89,13 @@ local Toggle = Main:CreateToggle({
     Name = "Get Funky",
     CurrentValue = false,
     Callback = function(Value)
-        _G.GetFunky = Value
+        GetFunky = Value
         GetFunkyFunction()
     end,
 })
 
+
+--[[
 local List = ""
 for _, item in ipairs(game:GetService("ReplicatedStorage").locked_upgs:GetChildren()) do
     List = List .. " + " .. item.Name
@@ -102,3 +105,4 @@ local Paragraph = Main:CreateParagraph({
     Title = "Paragraph Example",
     Content = List
 })
+]]
